@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css?family=Neucha");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translate(22px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(17px, 5px);
+  }
+  33% {
+    -webkit-transform: translate(0px, 10px);
+  }
+  55% {
+    -webkit-transform: translate(-10px, 0px);
+  }
+  60% {
+    -webkit-transform: translate(-18px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(20px, 0px);
+  }
+}
+@-webkit-keyframes reflex {
+  0% {
+    -webkit-transform: translate(12px, 0px);
+  }
+  10% {
+    -webkit-transform: translate(17px, -2px);
+  }
+  33% {
+    -webkit-transform: translate(20px, -5px);
+  }
+  55% {
+    -webkit-transform: translate(23px, -7px);
+  }
+  60% {
+    -webkit-transform: translate(24px, -5px);
+  }
+  100% {
+    -webkit-transform: translate(12px, 0px);
+  }
+}
+body {
+  background: url("http://www.sarabianchi.it/code-images/monsters/bg-monster.svg")
+    no-repeat top center;
+  background-size: 100%;
+  font-family: "Neucha", cursive;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .container {
+  background-color: transparent;
+  position: relative;
+  width: 780px;
+  height: 100vh;
+  margin: 0px auto;
+  padding: 80px 60px;
+}
+body .container .card,
+body .container .post {
+  max-width: 680px;
+  background-color: #fff;
+  margin: 0px auto;
+  padding: 40px 35px;
+  position: relative;
+  box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+body .container .card #circle,
+body .container .post #circle {
+  box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  width: 500px;
+  height: 500px;
+  top: -75%;
+  right: -23%;
+  background: -moz-linear-gradient(top, #f1d620 0%, #f2b540 100%);
+  background: -webkit-linear-gradient(top, #f1d620 0%, #f2b540 100%);
+  background: linear-gradient(to bottom, #f1d620 0%, #f2b540 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1d620', endColorstr='#f2b540',GradientType=0 );
+  border-radius: 50%;
+}
+body .container .card #circle svg,
+body .container .post #circle svg {
+  margin-top: 33%;
+  width: 69%;
+}
+body .container .card #circle svg .eye,
+body .container .post #circle svg .eye {
+  -webkit-animation-name: move;
+  animation-name: move;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+body .container .card #circle svg .eye ellipse,
+body .container .post #circle svg .eye ellipse {
+  -webkit-animation-name: reflex;
+  animation-name: reflex;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+body .container .card h1,
+body .container .post h1 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #341d5c;
+}
+body .container .card label,
+body .container .post label {
+  vertical-align: top;
+  font-size: 18px;
+  color: #c2c2c2;
+  margin: 20px 30px 0px 0px;
+  display: inline-block;
+}
+body .container .card input,
+body .container .card textarea,
+body .container .card select,
+body .container .post input,
+body .container .post textarea,
+body .container .post select {
+  margin-top: 20px;
+  background-color: #947cbd;
+  font-family: "Neucha", cursive;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+}
+body .container .card ::-webkit-input-placeholder,
+body .container .card select,
+body .container .post ::-webkit-input-placeholder,
+body .container .post select {
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+body .container .card input:focus,
+body .container .card input:active,
+body .container .card select:active,
+body .container .card select:focus,
+body .container .card textarea:focus,
+body .container .card textarea:active,
+body .container .card button:focus,
+body .container .card button:active,
+body .container .post input:focus,
+body .container .post input:active,
+body .container .post select:active,
+body .container .post select:focus,
+body .container .post textarea:focus,
+body .container .post textarea:active,
+body .container .post button:focus,
+body .container .post button:active {
+  outline: none;
+  color: #fff;
+}
+body .container .card select option,
+body .container .post select option {
+  background: #fff;
+  color: #c2c2c2;
+}
+body .container .card input,
+body .container .post input {
+  margin-left: 18px;
+  width: calc(72% - 37.5%);
+}
+body .container .card textarea,
+body .container .post textarea {
+  margin-left: 15px;
+  width: 72%;
+  max-width: 72%;
+  max-height: 145px;
+}
+body .container .card select,
+body .container .post select {
+  width: calc(74.8% - 37.5%);
+  color: #fff;
+}
+body .container .card .button-area,
+body .container .post .button-area {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+body .container .card .button-area #add,
+body .container .card .button-area #reset,
+body .container .post .button-area #add,
+body .container .post .button-area #reset {
+  width: 90px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Neucha", cursive;
+  color: #fff;
+  font-size: 16px;
+  margin: 0px 5px;
+}
+body .container .card .button-area #add,
+body .container .post .button-area #add {
+  background-color: #341d5c;
+}
+body .container .card .button-area #reset,
+body .container .post .button-area #reset {
+  background-color: #c2c2c2;
+}
+body .container .post {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+  color: #c2c2c2;
+  font-size: 18px;
+  line-height: 25px;
+}
+body .container .post strong {
+  color: #341d5c;
+}
+body .container .post img {
+  float: right;
+  width: 20%;
+  margin-top: -60px;
+}
+body .container .post .remove-post {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  top: 5px;
+  right: 10px;
+  color: #c2c2c2;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}

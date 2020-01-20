@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Đo nồng độ cồn</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <section class="card">
+      <h1>Đo nồng độ cồn</h1>
+      <form id="form-card">
+        <div>
+          <label>Giới tính: </label>
+          <select form="form-card" id="gender">
+            <option value="male">Nam</option>
+            <option value="female">Nữ</option>
+          </select><br>
+        </div>
+        <div>
+          <label>Tuổi: </label><input type="number" id="age" value="30" placeholder="Nhập số tuổi"><br>
+        </div>
+        <div>
+          <label>Cân nặng: </label><input type="number" id="weight" value="60" placeholder="Nhập số kg"><br>
+        </div>
+        <div>
+          <label>Chiều cao: </label><input type="number" id="height" value="170" placeholder="Nhập số cm"><br>
+        </div>
+        <div>
+          <label>Loại đồ uống: </label>
+          <select form="form-card" id="brand">
+            <option value="beer">Bia</option>
+            <option value="wine">Rượu</option>
+          </select><br>
+        </div>
+        <div id="beer" style="display: block;">
+          <label>Chọn hãng bia:</label>
+          <select id="category-beer">
+            <option value="330-5.3">333</option>
+            <option value="250-5">Heineken 250ml</option>
+            <option value="330-5">Heineken 330ml</option>
+            <option value="500-7">Heineken 500ml</option>
+            <option value="330-5">Tiger 330ml</option>
+            <option value="500-5">Tiger 500ml</option>
+            <option value="330-5">Carlberg 330ml</option>
+            <option value="500-5">Carlberg 500ml</option>
+            <option value="330-4.6">Hà Nội 330ml (4.6%)</option>
+            <option value="330-5.1">Hà Nội 330ml (5.1%)</option>
+            <option value="450-4.2">Hà Nội 450ml</option>
+            <option value="330-4.7">Huda 330ml</option>
+            <option value="350-4.7">Huda 350ml</option>
+            <option value="500-5">Huda 500ml</option>
+            <option value="330-4">Larue 330ml</option>
+            <option value="355-4">Larue 355ml</option>
+            <option value="355-4.9">Sài gòn Export</option>
+            <option value="450-4.3">Sài gòn Lager</option>
+            <option value="330-4.9">Sàn gòn Special</option>
+            <option value="330-5">Sam Miguel 330ml</option>
+            <option value="500-5">Sam Miguel 500ml</option>
+            <option value="330-5">Sapporo 330ml</option>
+            <option value="650-5.2">Sapporo 650ml</option>
+          </select>
+        </div>
+        <div id="beer-cup" style="display: block;">
+          <label>Tửu lượng </label>
+          <select id="beer-cup-number">
+            <script type="text/javascript">
+              for (var i = 1; i <= 30; i++) {
+                document.write("<option value='" + i + "'>" + i + " lon</option>");
+              }
+            </script>
+          </select>
+        </div>
+        <div id="wine" style="display: none;">
+          <label>Chọn loại rượu:</label>
+          <select class="form-control" id="category-wine">
+            <option value="40">Gạo</option>
+            <option value="40">Nếp</option>
+            <option value="40">Camus</option>
+            <option value="40">Hines</option>
+            <option value="40">Vodka</option>
+            <option value="12">Bordeaux</option>
+            <option value="12">Bourgogne</option>
+            <option value="12">Champagne</option>
+            <option value="12">Côte du Rhône</option>
+            <option value="15">Chardonnay</option>
+            <option value="15">Cabernet Sauvignon</option>
+            <option value="15">Merlot</option>
+            <option value="40">Hennessy</option>
+            <option value="40">Remy Martin</option>
+            <option value="40">Martel, Otard</option>
+            <option value="40">Courvoisier</option>
+          </select>
+        </div>
+        <div id="wine-cup" style="display: none;">
+          <label>Loại ly uống:</label>
+          <select id="cup">
+            <option value="50">50ml</option>
+            <option value="100">100ml</option>
+            <option value="200">200ml</option>
+            <option value="300">300ml</option>
+            <option value="400">400ml</option>
+            <option value="500">500ml</option>
+          </select>
+        </div>
+        <div id="wine-cup-number" style="display: none;">
+          <label>Tửu lượng:</label>
+          <select id="cup-number">
+            <script type="text/javascript">
+              for (var i = 1; i <= 50; i++) {
+                document.write("<option value='" + i + "'>" + i + " ly</option>");
+              }
+            </script>
+          </select>
+        </div>
+        <div>
+          <label>Thời gian từ lúc uống xong đến bây giờ: </label><input type="number" id="time" value="60"
+            placeholder="Nhập số phút"><br>
+        </div>
+        <div class="button-area">
+          <button type="button" id="add">Thổi</button>
+          <button type="button" id="reset">Uống lại</button>
+          <a href="https://github.com/duthaho/nongdocon" target="_blank">Star on Github</a>
+        </div>
+      </form>
+    </section>
+    <section class="info">
+    </section>
+    <section class="note">
+      <div class="post">
+        <p><strong>Kết quả ước tính nồng độ cồn trong hơi thở không hoàn toàn chính xác vì còn những yếu tố khác ảnh
+            hưởng lên kết quả như yếu tố di truyền, tình trạng sức khỏe, thói quen phá mồi hay đi đái của mỗi người...Do
+            đó, để đảm bảo an toàn 100% khi tham gia giao thông tốt nhất chúng ta nên THÔNG chốt hoặc KHÔNG nên
+            uống.</strong></p>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
