@@ -12,33 +12,33 @@
 <body>
   <div class="container">
     <section class="card">
-      <h1>Đo nồng độ cồn</h1>
+      <h1>Đo nồng độ cồn - <a href="https://github.com/duthaho/nongdocon" target="_blank">Github</a></h1>
       <form id="form-card">
-        <div>
+        <div class="row">
           <label>Giới tính: </label>
           <select form="form-card" id="gender">
             <option value="male">Nam</option>
             <option value="female">Nữ</option>
           </select><br>
         </div>
-        <div>
-          <label>Tuổi: </label><input type="number" id="age" value="30" placeholder="Nhập số tuổi"><br>
+        <div class="row">
+          <label>Tuổi: </label><input type="number" id="age" placeholder="tuổi"><br>
         </div>
-        <div>
-          <label>Cân nặng: </label><input type="number" id="weight" value="60" placeholder="Nhập số kg"><br>
+        <div class="row">
+          <label>Cân nặng: </label><input type="number" id="weight" placeholder="kg"><br>
         </div>
-        <div>
-          <label>Chiều cao: </label><input type="number" id="height" value="170" placeholder="Nhập số cm"><br>
+        <div class="row">
+          <label>Chiều cao: </label><input type="number" id="height" placeholder="cm"><br>
         </div>
-        <div>
-          <label>Loại đồ uống: </label>
+        <div class="row">
+          <label>Đồ uống: </label>
           <select form="form-card" id="brand">
             <option value="beer">Bia</option>
             <option value="wine">Rượu</option>
           </select><br>
         </div>
-        <div id="beer" style="display: block;">
-          <label>Chọn hãng bia:</label>
+        <div class="row" id="beer">
+          <label>Hãng bia:</label>
           <select id="category-beer">
             <option value="330-5.3">333</option>
             <option value="250-5">Heineken 250ml</option>
@@ -65,8 +65,8 @@
             <option value="650-5.2">Sapporo 650ml</option>
           </select>
         </div>
-        <div id="beer-cup" style="display: block;">
-          <label>Tửu lượng </label>
+        <div class="row" id="beer-cup">
+          <label>Tửu lượng: </label>
           <select id="beer-cup-number">
             <script type="text/javascript">
               for (var i = 1; i <= 30; i++) {
@@ -75,8 +75,8 @@
             </script>
           </select>
         </div>
-        <div id="wine" style="display: none;">
-          <label>Chọn loại rượu:</label>
+        <div class="row" id="wine">
+          <label>Loại rượu:</label>
           <select class="form-control" id="category-wine">
             <option value="40">Gạo</option>
             <option value="40">Nếp</option>
@@ -96,8 +96,8 @@
             <option value="40">Courvoisier</option>
           </select>
         </div>
-        <div id="wine-cup" style="display: none;">
-          <label>Loại ly uống:</label>
+        <div class="row" id="wine-cup">
+          <label>Loại ly:</label>
           <select id="cup">
             <option value="50">50ml</option>
             <option value="100">100ml</option>
@@ -107,7 +107,7 @@
             <option value="500">500ml</option>
           </select>
         </div>
-        <div id="wine-cup-number" style="display: none;">
+        <div class="row" id="wine-cup-number">
           <label>Tửu lượng:</label>
           <select id="cup-number">
             <script type="text/javascript">
@@ -117,14 +117,12 @@
             </script>
           </select>
         </div>
-        <div>
-          <label>Thời gian từ lúc uống xong đến bây giờ: </label><input type="number" id="time" value="60"
-            placeholder="Nhập số phút"><br>
+        <div class="row">
+          <label>Thời gian: </label><input type="number" id="time" placeholder="phút"><br>
         </div>
         <div class="button-area">
-          <button type="button" id="add">Thổi</button>
-          <button type="button" id="reset">Uống lại</button>
-          <a href="https://github.com/duthaho/nongdocon" target="_blank">Star on Github</a>
+          <button type="button" id="add">Đo</button>
+          <button type="button" id="reset">Reset</button>
         </div>
       </form>
     </section>

@@ -27,6 +27,10 @@ var $categoryBeer = $('#category-beer');
 var $categoryWine = $('#category-wine');
 var $time = $('#time');
 
+$wine.hide();
+$wineCup.hide();
+$wineCupNumber.hide();
+
 $('#brand').on('change', function () {
   if (this.value === 'beer') {
     $beer.show();
